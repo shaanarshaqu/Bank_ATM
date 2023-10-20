@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FederalBank</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <img src="https://www.federalbank.co.in/o/federal-bank-theme/images/logo.png" alt="logo" id="main-logo">
+    <div id="headbal">
+        <div id="setalert">
+            <!-- <div id="alert-box"></div> -->
+        </div>
+        <span id="total">0.0 Rs</span>
+    </div>
+    <div id="main">
+
+        <div class="div-con">
+            <div class="both">
+                <h3>Deposit</h3>
+                <i class="fa-solid fa-indian-rupee-sign" id="icon1"></i><input type="text" placeholder="Enter Amount"
+                    id="add" required><br>
+                <button id="depo" onclick="amountadd()">Deposit</button>
+
+
+            </div>
+            <img src="https://cdn-icons-png.flaticon.com/512/7939/7939832.png" alt="" class="logos">
+        </div>
+        <div class="div-con">
+            <div class="both">
+                <h3>Withdrawal</h3>
+                <i class="fa-solid fa-indian-rupee-sign" id="icon2"></i><input type="text" placeholder="Enter Amount"
+                    id="less"><br>
+                <button id="with" onclick="amountless()">Withdraw</button>
+
+            </div>
+            <img src="https://cdn-icons-png.flaticon.com/512/7939/7939990.png" alt="" class="logos">
+        </div>
+
+    </div>
+    <div id="balancebt">
+        <button id="check" onclick="check_balance()">Check Balance</button>
+
+    </div>
+    <script>
+        var total = 0;
+        function amountadd() {
+            let x = parseFloat(document.getElementById("add").value);
+            if (x >= 0) {
+                total = total + x;
+                document.getElementById("total").innerHTML = "0.0 Rs";
+                alert("Rs " + x + " credited to your bank account");
+                // document.getElementById("total").innerHTML = total + " Rs";
+
+
+            }
+            else {
+                alert("! What are you doing");
+            }
+
+        }
+
+        function amountless() {
+            let y = parseFloat(document.getElementById("less").value);
+            if (y >= 0) {
+                if (y <= total) {
+                    total = total - y;
+                    document.getElementById("total").innerHTML = "0.0 Rs";
+                    alert("Rs " + y + " Debited from your bank account");
+                    // document.getElementById("alert-box").innerHTML="Rs " + y + " Debited from your bank account";
+                    // document.getElementById("alert-box").style.display="block"
+                    // setTimeout(function(){
+                    //     document.getElementById("alert-box").style.display="none"
+                    // },1000);
+
+                }
+                else {
+                    // document.getElementById("alert-box").innerHTML="Rs " + y + " Debited from your bank account";
+                    // document.getElementById("alert-box").style.display="block"
+                    // setTimeout(function(){
+                    //     document.getElementById("alert-box").style.display="none"
+                    // },1000);
+                    alert("! Insufficient balance");
+                }
+            }
+            else {
+                alert("! What are you doing");
+
+            }
+        }
+
+        function check_balance() {
+            document.getElementById("total").innerHTML = total + " Rs";
+        }
+    </script>
+</body>
+
+</html>

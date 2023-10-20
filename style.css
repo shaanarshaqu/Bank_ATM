@@ -1,0 +1,161 @@
+
+    
+    
+
+
+
+
+
+#main-logo{
+    margin:7px ;
+    width: 200px;
+    height: auto;
+}
+#headbal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+#total{
+    margin-top: 0;
+    font-size: 40px;
+    color: white;
+    padding: 20px;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 700px;
+    background-color: #004e96;
+}
+
+#main {
+    
+    width: 100%;
+    height: 500px;
+    background: #004e96;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.div-con {
+    width: 30%;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 30px;
+    /* border: 1px solid black; */
+
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.581) ;
+    align-items: center;
+
+}
+
+
+.both {
+    
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+
+    margin-top: 30px;
+    width: 100%;
+    height: 300px;
+    /* line-height: 60px; */
+    background-color: rgb(255, 255, 255);
+
+}
+
+
+button {
+    padding:10px 20px;
+    border: none;
+    background-color: #faa61a;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.581) ;
+    transition: transform 0.05s ,opacity 0.05s ,boxshadow 0.05s;
+}
+
+button:hover {
+    opacity: 0.9;
+    
+}
+
+button:active {
+    transform: translate(0px, 2px);
+    opacity: 1;
+    box-shadow: none;
+}
+input{
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    text-align: center;
+}
+h3{
+    font-size: 30px;
+    color: #004e96;
+    padding-bottom: 70px;
+}
+#balancebt{
+    text-align: center;
+}
+#check{
+    padding: 15px 40px;
+}
+
+#icon1{
+    position: absolute;
+    left: 242px;
+    top: 435px;
+    
+    
+}
+#icon2{
+    position: absolute;
+    right: 508px;
+    top: 435px;
+}
+.logos{
+    width: 100px;
+    height: auto;
+    margin-top: 30px ;
+    opacity: 0.2;
+}
+
+#setalert{
+    width: 100%;
+    height: 60px;
+    /* background: white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#alert-box{
+    padding-top:20px ;
+    text-align: center;
+    width: 50%;
+    height: 40px;
+    border-radius: 20px;
+    background: rgb(255, 255, 255);
+    color: rgb(54, 126, 54);
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* display: flex;   */
+    font-style:italic;
+    
+    font-size:large;
+    
+    
+    
+}
